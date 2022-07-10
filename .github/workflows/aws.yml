@@ -31,7 +31,7 @@ jobs:
         copy winrar.exe C:\Users\Public\Desktop\winrar.exe
         
     - name: Create Tunnel
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389 -region ${{ secrets.NGROK_REGION }}"'
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
 
     - name: Connect to RDP  [CPU 2 Core - 7GB Ram - 256 SSD]
       run: cmd /c start.bat
