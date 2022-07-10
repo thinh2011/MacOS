@@ -21,6 +21,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/tanRDP/main/resources/start.bat -OutFile start.bat
 
         Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/tanRDP/main/resources/winrar.exe -OutFile winrar.exe
+        
+        Invoke-WebRequest https://raw.githubusercontent.com/MinatoAka/RDP-New/main/files/AU.bat -OutFile NGROK-AU.bat
 
     - name: Extract ngrok Files
 
