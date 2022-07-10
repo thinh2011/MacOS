@@ -18,9 +18,9 @@ jobs:
 
         Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
 
-        Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/ngrok-rdp1/main/resources/start.bat -OutFile start.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/tanRDP/main/resources/start.bat -OutFile start.bat
 
-        Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/ngrok-rdp1/main/resources/winrar.exe -OutFile winrar.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/tanRDP/main/resources/winrar.exe -OutFile winrar.exe
 
     - name: Extract ngrok Files
 
@@ -66,7 +66,7 @@ jobs:
 
       run: |
 
-        Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/ngrok-rdp1/main/resources/loop.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://raw.githubusercontent.com/tantanrustandi/tanRDP/main/resources/loop.ps1 -OutFile loop.ps1
 
         ./loop.ps1
 
