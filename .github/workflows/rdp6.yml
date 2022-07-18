@@ -1,4 +1,4 @@
-name: RDP5
+name: RDP6
 on: workflow_dispatch
 
 jobs:
