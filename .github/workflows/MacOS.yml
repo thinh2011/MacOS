@@ -1,4 +1,4 @@
-name: macOS
+name: MacOS
 on: 
   workflow_dispatch:
 defaults:
@@ -7,15 +7,15 @@ defaults:
 
 jobs:
   build:
-    name: MacOS Build
-    runs-on: macos-latest
+    name: MacOS
+    runs-on: macos-10.15
     steps:
     - uses: actions/checkout@v2
     - name: Setting Up the MacOS Environment
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-      run: source MacOS.sh "@123Tan" "@123Tan" "$NGROK_AUTH_TOKEN"
+      run: source MacOS.sh "@123Tan" "@123Tan" "$NGROK_AUTH_TOKEN" "TanMacOS"
     - name: ngrok is now listening to VNC connections on...
-      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url' 
+      run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
     - name: Setup tmate Session
       uses: mxschmitt/action-tmate@v2
