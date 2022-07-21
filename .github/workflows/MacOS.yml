@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setting Up the MacOS Environment
       env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN_MacOS }}
       run: source MacOS.sh "@123Tan" "@123Tan" "$NGROK_AUTH_TOKEN" "TanMacOS"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
